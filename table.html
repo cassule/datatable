@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas com o datatable</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"
+    />
+    <style>
+      div.dataTables_wrapper {
+        margin-bottom: 3em;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        background-color: blueviolet !important;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+      .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background-color: blueviolet !important;
+      }
+      .bnt-sm {
+        padding: 10px;
+      }
+      .btn.btn-primary {
+        border: 1px solid orange;
+        background: none;
+      }
+
+      .btn.btn-secundary {
+        border: 1px solid greenyellow;
+        background: none;
+      }
+
+      .btn.btn-danger {
+        border: 1px solid red;
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="" class="display" style="width: 100%">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Embaixada</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>luanda@gmail.com</td>
+          <td>Governo Provincial de Luanda</td>
+          <td>
+            <button>Editar</button> <button>Apagar</button>
+            <button>Desativar</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Jane Doe</td>
+          <td>luanda@gmail.com</td>
+          <td>Governo Provincial de Luanda</td>
+          <td>
+            <button>Editar</button> <button>Apagar</button>
+            <button>Desativar</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>JAntony Doe</td>
+          <td>antony@gmail.com</td>
+          <td>Governo Provincial de AntonyLandia</td>
+          <td>
+            <button class="btn btn-primary">Editar</button>
+            <button class="btn btn-secundary">Apagar</button>
+            <button class="btn btn-danger">Desativar</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Embaixada</th>
+          <th>Ação</th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("table.display").DataTable({
+          language: {
+            url:
+              "https://cdn.datatables.net/plug-ins/1.10.21/i18n/Portuguese.json",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
